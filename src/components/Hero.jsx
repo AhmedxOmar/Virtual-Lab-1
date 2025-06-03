@@ -7,7 +7,11 @@ const Hero = () => {
     <div className="h-full heroSection">
       <img src={heroImg} alt="" />
       <div className="w-full h-full content-center">
+<<<<<<< HEAD
         <h1 className="text-light-text dark:text-dark-text text-[64px] font-black mb-[1rem]">
+=======
+        <h1 className="text-[64px] font-black mb-[1rem]">
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
           Master Image Processing with <br /> Virtual Lab
         </h1>
         <p className="text-xl mb-[1rem]">

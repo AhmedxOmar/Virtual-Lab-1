@@ -5,8 +5,11 @@ import bcrypt from "bcrypt";
 import cors from "cors";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
+<<<<<<< HEAD
 import jwt from "jsonwebtoken";
 
+=======
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 
 // Initialize Express App
 const app = express();
@@ -37,9 +40,12 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+<<<<<<< HEAD
   role: { type: String, enum: ["user", "admin", "root"], default: "user" },
   isBlocked: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now },
+=======
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 });
 
 // Pre-save Hook: Hash password before saving to DB
@@ -52,6 +58,7 @@ userSchema.pre("save", async function (next) {
 // Create User Model
 const User = mongoose.model("User", userSchema);
 
+<<<<<<< HEAD
 // Define Note Schema
 const noteSchema = new mongoose.Schema({
   userEmail: { type: String, required: true },
@@ -289,6 +296,10 @@ app.patch("/api/admin/users/:id/block", adminAuth, async (req, res) => {
   }
 }); */
 
+=======
+// ---------------- Routes ---------------- //
+
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 // Sign-Up Route
 app.post("/api/register", async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
@@ -323,6 +334,7 @@ app.post("/api/register", async (req, res) => {
 app.post("/api/signin", async (req, res) => {
   const { email, password } = req.body;
   try {
+<<<<<<< HEAD
     const user = await User.findOne({ email });
 
     if (!user) {
@@ -346,15 +358,31 @@ app.post("/api/signin", async (req, res) => {
       { expiresIn: "1h" }
     );
 
+=======
+    // Find user by email
+    const user = await User.findOne({ email });
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    // Check if password matches
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) return res.status(400).json({ error: "Invalid credentials" });
+
+    // Successful login
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
     res.status(200).json({
       user: {
         id: user._id,
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,
+<<<<<<< HEAD
         role: user.role,
       },
       token,
+=======
+      },
+      token: "dummy-token", // Replace with real token (JWT) later
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
     });
   } catch (error) {
     console.error("Error during signin:", error);

@@ -16,12 +16,20 @@ const techniques = [
 
 const ImageTechniques = () => {
     return (
+<<<<<<< HEAD
         <section className="py-20 bg-neutral-background">
+=======
+        <section className="py-20 bg-[#0f0f0f]">
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
             <motion.h2
                 initial={{ opacity: 0, y: -30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+<<<<<<< HEAD
                 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-neutral-text-primary"
+=======
+                className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-[#EFF6FF]"
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
             >
                 Techniques of Image Processing
             </motion.h2>
@@ -35,6 +43,7 @@ const ImageTechniques = () => {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.05 }}
+<<<<<<< HEAD
                             className={`bg-neutral-surface rounded-2xl shadow-md hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-start text-left border border-neutral-border hover:border-primary
                                 ${isLast ? "lg:col-span-2" : ""}`}
                         >
@@ -42,6 +51,15 @@ const ImageTechniques = () => {
                                 {technique.title}
                             </div>
                             <p className="text-sm text-neutral-text-secondary">
+=======
+                            className={`bg-[#1f1f1f] rounded-2xl shadow-md hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-start text-left border border-[#3a3a3a] hover:border-[#2563EB]
+                                ${isLast ? "lg:col-span-2" : ""}`}
+                        >
+                            <div className="text-xl poppins-semibold mb-2 text-white">
+                                {technique.title}
+                            </div>
+                            <p className="text-sm poppins-regular text-[#B0B0B0]">
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
                                 {technique.description}
                             </p>
                         </motion.div>
@@ -50,6 +68,10 @@ const ImageTechniques = () => {
             </div>
         </section>
     );
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 
 export default ImageTechniques;

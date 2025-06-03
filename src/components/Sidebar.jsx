@@ -59,16 +59,25 @@ export default function Sidebar() {
     return (
         <aside
             className={`markdownSidebar transition-all duration-900 ease-in-out
+<<<<<<< HEAD
     ${sidebarCollapsed ? "w-[50px]" : "w-[380px] bg-neutral-surface"} 
     pb-[3rem] text-neutral-text-primary dark:text-neutral-text-primary sticky z-40`}
+=======
+                ${sidebarCollapsed ? "w-[50px]" : "w-[440px] bg-[#1a1a1a]"} 
+                pb-[3rem] text-white sticky z-40`}
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
         >
             <div className="sidebarViewport">
                 <div className="sidebarContainer">
                     <div className="flex p-2">
                         <button
                             onClick={() => setSidebarCollapsed(prev => !prev)}
+<<<<<<< HEAD
                             className="p-1 bg-neutral-surface hover:bg-neutral-surface border-2 border-neutral-border rounded-lg transition"
 
+=======
+                            className="p-1 bg-[#1F1F1F] mb-4 hover:bg-[#1F1F1F] border-2 border-[#2E2E2E] rounded-lg transition"
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
                             title={sidebarCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
                         >
                             {sidebarCollapsed ? <TbLayoutSidebarRightCollapse size={30} /> : <TbLayoutSidebarLeftCollapse size={30} />}
@@ -77,13 +86,21 @@ export default function Sidebar() {
 
                     {!sidebarCollapsed && (
                         <nav className="transition">
+<<<<<<< HEAD
                             <ul className="space-y-2 pr-2 pl-[12px] ">
+=======
+                            <ul className="space-y-2 pr-2 ">
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
                                 {chapters.map((chapter, index) => (
                                     <li key={chapter.chapter}>
                                         <div
                                             onClick={() => toggleChapter(chapter, index)}
+<<<<<<< HEAD
                                             className="cursor-pointer font-semibold hover:bg-neutral-background p-2 rounded-lg flex justify-between items-center"
 
+=======
+                                            className="cursor-pointer font-semibold hover:bg-[#222] p-2 rounded-lg flex justify-between items-center"
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
                                         >
                                             <motion.span
                                                 className="select-none overflow-hidden text-ellipsis w-full "
@@ -145,12 +162,21 @@ export default function Sidebar() {
                                                                 >
                                                                     <Link
                                                                         to={`/docs/${topic.id}`}
+<<<<<<< HEAD
                                                                         className={`block px-2 py-1 rounded-lg transition ${isActive ? "bg-neutral-background" : "hover:bg-neutral-background"} flex items-center`}
 
                                                                         style={{ whiteSpace: "normal", overflow: "visible", textOverflow: "unset" }}
                                                                     >
                                                                         {getTopicStatusIcon(topic.id)}
                                                                         <span>{topic.title}</span>
+=======
+                                                                        className={`block px-2 py-1 rounded-lg transition ${isActive ? "bg-[#333]" : "hover:bg-[#333]"
+                                                                            } flex items-center`}
+                                                                        style={{ whiteSpace: "normal", overflow: "visible", textOverflow: "unset" }}
+                                                                    >
+                                                                        {getTopicStatusIcon(topic.id)}
+                                                                        <span className="truncate">{topic.title}</span>
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
                                                                     </Link>
                                                                 </motion.li>
                                                             );

@@ -15,6 +15,7 @@ const Quiz = ({ chapterId }) => {
     const user = JSON.parse(localStorage.getItem("user"));
     const email = user?.email; // Safe access in case user is null
 
+<<<<<<< HEAD
 useEffect(() => {
     // Fetch questions from the backend API
     const fetchQuestions = async () => {
@@ -37,6 +38,32 @@ useEffect(() => {
 
     fetchQuestions();
 }, [chapterId]);// Depend on chapterId
+=======
+    useEffect(() => {
+        // Fetch questions when the component mounts or when chapterId changes
+        const fetchQuestions = async () => {
+            try {
+                // Fetch the quiz questions JSON file based on the chapterId
+                const response = await fetch(`/quizzes/chapter${chapterId}.json`);
+
+                if (!response.ok) throw new Error('Failed to fetch questions');
+
+                const data = await response.json();
+
+                // Shuffle the questions randomly and pick the first 10
+                const shuffled = data.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+                setQuestions(shuffled); // Set the fetched and shuffled questions
+
+            } catch (error) {
+                console.error('Error loading quiz:', error);
+                setQuestions([]); // Set empty if error occurs
+            }
+        };
+
+        fetchQuestions();
+    }, [chapterId]); // Depend on chapterId
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 
     // Handle selecting an answer for the current question
     const handleAnswer = (option) => {

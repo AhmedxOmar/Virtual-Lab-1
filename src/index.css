@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "tailwindcss";
 
 
@@ -135,6 +136,14 @@ body {
 }
 
 
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 
 .container {
   margin: 0 auto;
@@ -255,6 +264,14 @@ body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+<<<<<<< HEAD
+=======
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #101010;
+
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -262,9 +279,27 @@ body {
 }
 
 
+<<<<<<< HEAD
 
 #root {
   height: 100%;
+=======
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  box-sizing: border-box;
+}
+
+#root {
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
   width: 100%;
 }
 
@@ -278,6 +313,29 @@ button {
 }
 
 
+<<<<<<< HEAD
+=======
+/* button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+ */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 .proflieSidebar .sidebarTab {
   cursor: pointer;
   transition: 0.1s ease-in-out;
@@ -604,6 +662,10 @@ button {
   max-height: calc(100vh - (83px - 2rem));
   overflow-y: auto;
   position: sticky;
+<<<<<<< HEAD
+=======
+  border-left: 0.5px solid rgb(33, 33, 33);
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
   top: 20px;
 }
 
@@ -1058,7 +1120,11 @@ pre {
 
 
 
+<<<<<<< HEAD
 .modal-overlay {
+=======
+*/ .modal-overlay {
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
   position: fixed;
   top: 0;
   left: 0;
@@ -1159,6 +1225,7 @@ pre {
 
 .authorIdentity div {
   line-height: normal;
+<<<<<<< HEAD
 }
 
 
@@ -1171,4 +1238,6 @@ pre {
   .lightBtn{
     @apply bg-[##fbfbfb] py-[16px] px-[16px] rounded-[12px] border border-[#3B3B3B] hover:bg-[#3B3B3B] cursor-pointer transition
   }
+=======
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 }

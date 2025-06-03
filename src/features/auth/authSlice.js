@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createSlice } from '@reduxjs/toolkit';
 
 // Helper function to safely parse localStorage items
@@ -23,6 +24,20 @@ const initialState = {
     chapterProgress: getLocalStorageItem('chapterProgress') || {},
     topicProgress: getLocalStorageItem('topicProgress') || {},
 };
+=======
+// src/features/auth/authSlice.js
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+    user: JSON.parse(localStorage.getItem('user')) || null,
+    token: localStorage.getItem('token') || null,
+    quizProgress: JSON.parse(localStorage.getItem('quizProgress')) || {},
+    chapterProgress: JSON.parse(localStorage.getItem('chapterProgress')) || {},
+    topicProgress: JSON.parse(localStorage.getItem('topicProgress')) || {}, 
+};
+
+
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
 
 const authSlice = createSlice({
     name: 'auth',
@@ -66,12 +81,20 @@ const authSlice = createSlice({
             state.token = null;
             state.quizProgress = {};
             state.chapterProgress = {};
+<<<<<<< HEAD
             state.topicProgress = {};
+=======
+            state.topicProgress = {}; // Add this line
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
             localStorage.removeItem('user');
             localStorage.removeItem('token');
             localStorage.removeItem('quizProgress');
             localStorage.removeItem('chapterProgress');
+<<<<<<< HEAD
             localStorage.removeItem('topicProgress');
+=======
+            localStorage.removeItem('topicProgress'); // Add this line
+>>>>>>> bd0be452845bf8b902d31662959c737593c02b55
         },
     },
 });
